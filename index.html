@@ -114,9 +114,12 @@
                <div class="profile float-right">
                   <figure>
                      <picture>
-                        <img class="rounded-circle" src="/assets/img/vasundhara_profile.jpg" alt="vasundhara_profile.jpg">
+                        <img class="rounded-circle" src="/assets/img/prof_pic2.jpg" alt="prof_pic2.jpg" style="padding-left: 1em;">
                      </picture>
                   </figure>
+                  <div class="address">
+                     <p> </p>
+                  </div>
                </div>
                <div class="clearfix">
                   <p>Hello! Welcome to my digital portfolio!</p>
@@ -208,5 +211,23 @@
       <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
       <script src="/assets/js/zoom.js"></script>
       <script src="/assets/js/common.js"></script>
+
+      <script>
+         document.addEventListener('DOMContentLoaded', function() {
+         const profileImage = document.querySelector('.rounded-circle');
+
+         let timer;
+
+         profileImage.addEventListener('mouseenter', function() {
+         timer = setTimeout(() => {
+            this.src = this.src.includes('prof_pic2.jpg') ? '/assets/img/prof_pic1.jpeg' : '/assets/img/prof_pic2.jpg';
+            }, 1500); // 1 second delay 
+         });
+
+         profileImage.addEventListener('mouseleave', function() {
+               clearTimeout(timer); // cancel the timer
+            });
+         });
+       </script>
    </body>
 </html>
