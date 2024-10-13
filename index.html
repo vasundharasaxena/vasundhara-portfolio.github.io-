@@ -33,7 +33,33 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark" />
       <script src="/assets/js/theme.js"></script>
       <script src="/assets/js/dark_mode.js"></script>
+
+      <!-- Rotating Image -->
+      <style>
+         @keyframes rotateProfilePic {
+           from {
+             transform: rotateY(0deg);
+           }
+           to {
+             transform: rotateY(360deg);
+           }
+         }
+       
+         .rounded-circle {
+           transition: transform 3s;
+           transform-style: preserve-3d;
+           width: 300px; /* Example size: adjust as needed */
+           height: 300px; /* Example size: adjust as needed */
+           border-radius: 50%; /* To maintain the circle shape */
+         }
+       
+         .rounded-circle:hover {
+           animation: rotateProfilePic 5s forwards;
+         }
+       </style>
+      
    </head>
+   
 
    <body class="fixed-top-nav ">
       <header>
@@ -88,7 +114,7 @@
                <div class="profile float-right">
                   <figure>
                      <picture>
-                        <img class="rounded-circle" src="/assets/img/vasundhara_profile.jpg" alt="vasundhara_profile" style="padding-left: 1em;">
+                        <img class="rounded-circle" src="/assets/img/vasundhara_profile.jpg" alt="vasundhara_profile.jpg">
                      </picture>
                   </figure>
                </div>
