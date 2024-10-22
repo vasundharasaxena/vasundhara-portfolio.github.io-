@@ -1,0 +1,1168 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&family=Amatic+SC:wght@700&family=Caveat:wght@500&family=DynaPuff&family=Gloria+Hallelujah&family=Indie+Flower&family=Luckiest+Guy&family=Mali:wght@300&family=Merriweather+Sans&family=Monoton&family=Pacifico&family=Permanent+Marker&family=Rampart+One&family=Sacramento&family=Source+Code+Pro:wght@300&display=swap');
+
+
+/* font-family: 'Rampart One', cursive; */
+
+
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&family=Caveat:wght@500&family=DynaPuff&family=Gloria+Hallelujah&family=Indie+Flower&family=Luckiest+Guy&family=Merriweather+Sans&family=Monoton&family=Pacifico&family=Permanent+Marker&family=Source+Code+Pro:wght@300&display=swap');
+
+/* font-family: 'Amatic SC', cursive; */
+
+
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&family=Amatic+SC:wght@700&family=Bungee+Spice&family=Caveat:wght@500&family=DynaPuff&family=Gloria+Hallelujah&family=Indie+Flower&family=Luckiest+Guy&family=Merriweather+Sans&family=Monoton&family=Pacifico&family=Permanent+Marker&family=Silkscreen&family=Source+Code+Pro:wght@300&display=swap');
+
+/* font-family: 'Silkscreen', cursive; */
+
+
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* all similar content styling codes */
+section {
+    padding: 100px 0;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.about,
+.services,
+.skills,
+.teams,
+.contact,
+footer {
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .about-content,
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Amatic SC', cursive;
+    /* font-family: 'Rampart One', cursive; */
+    /* font-family: 'Ubuntu', sans-serif; */
+}
+
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .title::after {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: #dc143c;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+/* navbar styling */
+.navbar {
+    position: absolute;
+    height: 75px;
+    width: 100%;
+    z-index: 1;
+    padding: 20px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+
+    border-bottom-left-radius: 40% 40%;
+    border-bottom-right-radius: 40% 40%;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    margin-left: 30px;
+    font-weight: 600;
+}
+
+.navbar .logo a span {
+    color: crimson;
+    transition: all 0.3s ease;
+}
+
+.navbar .menu li {
+
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: crimson;
+}
+
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+
+}
+
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-up-btn:hover {
+    filter: brightness(70%);
+}
+
+
+/* home section styling */
+
+
+.home-section {
+    background-color: #000000;
+    background-color: linear-gradient(to top, #1c0522, transparent);
+    margin-top: -100px;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.home-section :before {
+    content: "";
+    position: absolute;
+    bottom: 100;
+    left: 0;
+    height: 100px;
+    width: 100px;
+
+    /* z-index: 1000; */
+}
+
+.home-section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.home-section img#moon {
+    mix-blend-mode: screen;
+}
+
+.home-section img#mountains_front {
+    z-index: 70px;
+}
+
+.home-section .home-content .text-1 {
+    margin-top: 70px;
+    font-size: 27px;
+}
+
+.home-section .home-content .text-2 {
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+    font-weight: 600;
+    margin-left: -3px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+.home-section .home-content .text-3 {
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+.home-section .home-content .text-3 span {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+.home-section .home-content a {
+    display: inline-block;
+    text-align: center;
+    background: crimson;
+    color: #fff;
+    font-size: 35px;
+    padding: 12px 36px;
+    width: 250px;
+    height: 72px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+    font-family: 'Amatic SC', cursive;
+}
+
+.home-section .home-content a:hover {
+    color: rgb(225, 225, 225);
+    background: none;
+}
+
+
+.home {
+    display: flex;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 30px;
+
+}
+
+.home .max-width {
+    width: 100%;
+    display: flex;
+}
+
+.home .max-width .row {
+    margin-right: 0;
+}
+
+.about {
+    margin-top: -90px;
+    margin-bottom: 7vh;
+    background-image: linear-gradient(rgb(7rgb(87, 135, 207)6), lightblue);
+}
+
+.about .title::after {
+    content: "who i am";
+    font-size: 30px;
+}
+
+.about .about-content .left {
+    margin-top: -20px;
+    width: 45%;
+    margin-left: -2vw;
+}
+
+.about .about-content .left img {
+
+    height: 490px;
+    width: 450px;
+    object-fit: cover;
+    border: 0px solid rgb(0, 0, 0);
+    border-radius: 240px;
+    box-shadow: #000000;
+    /* box-shadow: 0px 20px 30px rgb(0, 0, 0); */
+    transition: transform .1s ease-in;
+}
+
+.about .about-content .left img:hover {
+    transform: scale(1.01) rotate(-3deg);
+}
+
+.about .about-content .right {
+    margin-top: -50px;
+    width: 55%;
+}
+
+.about .about-content .right .text {
+    /* font-family: 'Rampart One', cursive;  */
+    font-family: 'Silkscreen', cursive;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right .text span {
+    color: crimson;
+}
+
+.about .about-content .right p {
+    text-align: justify;
+}
+
+.about .about-content .right a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    font-family: 'Amatic SC', cursive;
+    transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover {
+    color: crimson;
+    background: none;
+}
+
+/* services section styling */
+
+.custom-shape-divider-top-1666219378 {
+    margin-top: -100px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1666219378 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 101px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1666219378 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.services,
+.teams {
+    margin-top: -100px;
+    color: #fff;
+    background: rgb(0, 0, 0);
+}
+
+.services .title::before,
+.teams .title::before {
+
+    background: #fff;
+}
+
+.services .title::after,
+.teams .title::after {
+    font-size: 30px;
+    background: #111;
+    content: "what i provide";
+}
+
+.services .serv-content .card {
+    margin-top: -10px;
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover {
+    box-shadow: 10px 10px 10px rgb(59, 20, 20);
+    background: crimson;
+}
+
+.services .serv-content .card .box {
+    transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover .box {
+    transform: scale(1.05);
+}
+
+.services .serv-content .card i {
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+
+}
+
+.services .serv-content .card:hover i {
+    color: #fff;
+}
+
+.services .serv-content .card .text {
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 10px 0;
+    /* font-family: 'Rampart One', cursive;  */
+    font-family: 'Silkscreen', cursive;
+    margin-bottom: 40px;
+}
+
+/* skills section styling */
+
+.custom-shape-divider-top-1666193828 {
+    margin-top: -100px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.skills {
+    margin-top: -10px;
+    margin-bottom: -170px;
+}
+
+.skills .title::after {
+    content: "what i know";
+    font-size: 30px;
+}
+
+.skills .skills-content .column {
+
+    width: calc(50% - 60px);
+    padding: 10px;
+
+}
+
+.skills .skills-content .left .text {
+    margin-top: -50px;
+    font-family: 'Rampart One', cursive;
+    font-size: 30px;
+    font-weight: 700;
+
+}
+
+.skills .skills-content .left p {
+
+    font-size: 19px;
+    margin-top: 30px;
+    text-align: justify;
+
+}
+
+.baksa {
+    margin-top: -20px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.icons {
+    margin: 30px;
+    margin-inline: 30px;
+    transition: transform .6s ease-in;
+    scroll-behavior: smooth;
+
+}
+
+.icons:hover {
+    transform: scale(1.7) rotate(360deg);
+}
+
+/* teams section styling */
+
+.projectbox {
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.adjustcerti {
+    display: flex;
+    gap: .5rem;
+}
+
+/* for 1th cards */
+.container1 {
+    background-image: url("images/mern.png");
+    background-repeat: none;
+    background-size: cover;
+    width: 400px;
+    height: 200px;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+
+}
+
+.container1:hover .overlay {
+
+    font-size: .5rem;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* for 2nd card */
+.container2 {
+    background-image: url("images/ML.png");
+    background-repeat: none;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    margin: 1px auto;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container2:hover .overlay {
+    font-size: .3rem;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* for 3rd card */
+.container3 {
+    background-image: url("images/cisco.png");
+    background-repeat: none;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    /* margin-left:-2px; */
+    margin: 1px auto;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container3:hover .overlay {
+    font-size: .3rem;
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* for 4th card */
+.container4 {
+    background-image: url("images/projects.png");
+    background-repeat: none;
+    background-size: cover;
+    margin-top: 15px;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container4:hover .overlay {
+    font-size: .7rem;
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+.overlay {
+    position: absolute;
+    background-color: rgba(255, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(1.3);
+    opacity: 0;
+    transition: transform .4s ease 0s;
+}
+
+.overlay span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 5em;
+    color: #fff;
+    font-family: Sans-serif;
+}
+
+
+.custom-shape-divider-top-1666214835 {
+    margin-top: -100px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1666214835 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 121px;
+}
+
+.custom-shape-divider-top-1666214835 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.clickitem {
+    color: #f1f1f1;
+}
+
+.teams .title::after {
+    font-size: 2rem;
+    content: "& things i built";
+}
+
+/* 
+
+// anybody who still need my carousl section or want to copy it again help you with sharing it here happy copying.
+.teams .title::after{
+    font-size: 30px;
+    content: "things i built";
+}
+.teams .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover{
+    color: black;
+    background: crimson;
+    box-shadow: 10px 10px 20px rgb(59, 20, 20);
+}
+.teams .carousel .card .box{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.teams .carousel .card .text{
+    /* font-family: 'Rampart One', cursive;  */
+/* color: red;
+    font-family: 'Silkscreen', cursive;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+    margin-bottom: 30px;
+}
+.teams .carousel .card:hover .text{
+    /* font-family: 'Rampart One', cursive;  */
+/* color: rgb(255, 255, 255);
+}
+.teams .carousel .card img{
+ 
+    height: 160px;
+    width: 160px;
+    object-fit:fill;
+    border-radius: 50%; */
+/* border: 5px solid crimson; */
+/* transition: all 0.3s ease;
+}
+.teams .carousel .card:hover img{
+    object-fit:fill; */
+/* border-color: rgb(0, 0, 0); */
+/* } */
+/* .owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid crimson!important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: crimson!important; */
+/* }  */
+
+/* contact section styling */
+
+.contact {
+    background: url("images/crushed.jpg") no-repeat center;
+}
+
+
+.contact .title {
+
+    margin-top: -10px;
+}
+
+.contact .title::after {
+    font-size: 30px;
+    content: "get in touch";
+}
+
+.contact .contact-content .column {
+    width: calc(40% - 30px);
+}
+
+.contact .contact-content .text {
+    font-family: 'Rampart One', cursive;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact .contact-content .left p {
+    margin-bottom: 60px;
+    text-align: justify;
+}
+
+.contact .contact-content .left .icons {
+    margin: 20px 0;
+}
+
+.contact .contact-content .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact .contact-content .row .info {
+    margin-left: 30px;
+}
+
+.contact .contact-content .row i {
+    font-size: 25px;
+    padding: 20px;
+    color: crimson;
+}
+
+.contact .contact-content .row i:hover {
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+
+.contact .contact-content .info .head {
+    font-weight: 500;
+}
+
+.contact .contact-content .info .sub-title {
+
+    padding: 10px;
+    color: #333;
+}
+
+.icons2 {
+    margin: 30px;
+    margin-inline: 40px;
+    box-shadow: #000000;
+}
+
+.button-area a {
+    margin: 60px;
+    margin-left: 40px;
+    display: flex;
+    padding: 25px;
+    font-family: 'Amatic SC', cursive;
+    color: #fff;
+    text-align: center;
+    display: block;
+    width: 290px !important;
+    height: 100px;
+    outline: none;
+    font-size: 40px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    background: crimson;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.button-area a:hover {
+    color: crimson;
+    background: none;
+}
+
+.custom-shape-divider-bottom-1666223871 {
+    margin-bottom: -60px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1666223871 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 200px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1666223871 .shape-fill {
+    fill: #000000;
+}
+
+
+
+/* footer section styling */
+footer {
+    margin-top: -42px;
+    background: rgb(0, 0, 0);
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+
+.social {
+    margin: 40px 40px;
+}
+
+.social i {
+    color: #ffffff;
+    font-size: 30px;
+    padding: 0px 10px;
+    transition: transform .5s ease-in-out;
+}
+
+.social i:hover {
+    color: #e72c2c;
+    transform: scale(1.7) rotate(360deg);
+}
+
+
+footer span a {
+    color: rgb(211, 22, 22);
+    text-decoration: none;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}
+
+
+/* responsive media query start */
+@media (max-width: 1104px) {
+    .about .about-content .left img {
+        height: 350px;
+        margin-bottom: 30px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 947px) {
+
+    .container4 {
+        /* align-items: center; */
+        justify-content: center;
+        height: 320px;
+        margin-left: 25px;
+        width: 320px;
+        /* margin-right: 10px; */
+    }
+
+    /* .projectbox{
+        /* position: relative; */
+    /* padding: 20px auto; */
+    /* flex-direction: column; */
+    /* } */
+    */ .project-right {
+        /* position: absolute; */
+        flex-direction: column;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 70px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 35px;
+    }
+
+    .home .home-content a {
+        font-size: 40px;
+        padding: 10px 30px;
+    }
+
+    .max-width {
+        max-width: 930px;
+    }
+
+    .about .about-content .column {
+        width: 100%;
+    }
+
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .about-content .right {
+        flex: 100%;
+    }
+
+    .services .serv-content .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+
+    .skills .skills-content .column,
+    .contact .contact-content .column {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 690px) {
+
+    .max-width {
+        padding: 0 23px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 60px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 32px;
+    }
+
+    .home .home-content a {
+        font-size: 40px;
+    }
+
+    .services .serv-content .card {
+        width: 100%;
+    }
+
+
+    .container1 {
+        width: 330px;
+        justify-content: space-around;
+        /* margin-right: 20px; */
+    }
+
+    .container4 {
+        /* align-items: center; */
+        justify-content: center;
+        height: 320px;
+        margin-left: 25px;
+        width: 320px;
+        /* margin-right: 10px; */
+    }
+
+    .projectbox {
+        /* position: relative; */
+        padding: 20px auto;
+        flex-direction: column;
+    }
+
+    .project-right {
+        /* position: absolute; */
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2 {
+        font-size: 50px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 27px;
+    }
+
+    .about .about-content .right .text,
+    .skills .skills-content .left .text {
+        font-size: 19px;
+    }
+
+    .contact .right form .fields {
+        flex-direction: column;
+    }
+
+    .contact .right form .name,
+    .contact .right form .email {
+        margin: 0;
+    }
+
+    .right form .error-box {
+        width: 150px;
+    }
+
+    .scroll-up-btn {
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+
+
+}
+
+
+
+
+/* Media Queries */
+
+/* Adjust container widths and heights for smaller screens */
+@media screen and (max-width: 768px) {
+    .container1 {
+        width: 300px;
+        height: 150px;
+    }
+
+    .container2,
+    .container3 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .container4 {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Adjust font size for smaller screens */
+@media screen and (max-width: 480px) {
+    .overlay span {
+        font-size: 3em;
+    }
+}
