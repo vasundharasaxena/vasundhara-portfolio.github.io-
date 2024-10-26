@@ -262,7 +262,7 @@ h1 {
 
 
 .second {
-    background-image: url("images/insight.jpg");
+    background-image: url("images/ml.jpg");
     background-attachment: fixed;
     height: 12vh;
 }
@@ -343,13 +343,13 @@ h3 {
 }
 
 .img-second {
-    background-image: url("images/ml.jpg");
+    background-image: url("images/bot.jpg");
 }
 
-/* 
+
 .img-third {
-  background-image: url("/images/");
-} */
+  background-image: url("/images/hotel.jpg");
+} 
 
 .img-fourth {
     background-image: url("https://media3.giphy.com/media/j2q6W9tRZaIVVyc0qT/giphy.gif?cid=ecf05e47dhuc18te6prukh6m20lrmgyxra3ydl4720op9gs0&ep=v1_gifs_search&rid=giphy.gif");
