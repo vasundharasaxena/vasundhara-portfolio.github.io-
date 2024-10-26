@@ -262,13 +262,13 @@ h1 {
 
 
 .second {
-    background-image: url("images/skillserve.pages.dev_.png");
+    background-image: url("images/insight.jpg");
     background-attachment: fixed;
     height: 12vh;
 }
 
 .fifth{
-    background-image: url("images/skillserve.pages.dev_.png");
+    background-image: url("images/insight.jpg");
     background-attachment: fixed;
     height: 12vh;
 }
@@ -364,7 +364,7 @@ h3 {
 }
 
 .img-seventh {
-    background-image: url("images/parapop\ card.png");
+    background-image: url("images/sales.jpg");
 }
 
 
@@ -379,7 +379,7 @@ h3 {
     height: 100vh;
     flex-direction: row;
     gap: 1.6em;
-    background-image: url("images/parapopback.png");
+    background-image: url("images/sales.jpg");
 }
 
 
