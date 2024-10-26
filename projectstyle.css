@@ -262,13 +262,13 @@ h1 {
 
 
 .second {
-    background-image: url("images/ml.jpg");
+    background-image: url("images/insight.jpg");
     background-attachment: fixed;
     height: 12vh;
 }
 
 .fifth{
-    background-image: url("images/insight.jpg");
+    background-image: url("images/ml.jpg");
     background-attachment: fixed;
     height: 12vh;
 }
@@ -385,7 +385,7 @@ h3 {
 
 .third {
 
-    background-image: url("images/library.png");
+    background-image: url("https://miro.medium.com/v2/resize:fit:1400/0*Yb_BsikIKFAtuKj9.gif");
     background-attachment: fixed;
     height: 12vh;
     height: 100vh;
