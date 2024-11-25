@@ -622,7 +622,7 @@ section .title::after {
     background-repeat: none;
     background-size: cover;
     margin-top: 15px;
-    width: 400px;
+    width: 600px;
     height: 400px;
     position: relative;
     overflow: hidden;
