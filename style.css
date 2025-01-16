@@ -597,7 +597,7 @@ section .title::after {
 
 /* for 3rd card */
 .container3 {
-    background-image: url("images/cisco.png");
+    background-image: url("images/googleAI.png");
     background-repeat: none;
     background-size: cover;
     width: 200px;
